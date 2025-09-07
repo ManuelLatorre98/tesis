@@ -1,0 +1,30 @@
+\chapter{Conclusiones y trabajos futuros}
+\label{cap:conclusionesYTrabajosFuturos}
+
+El objetivo de este trabajo de tesis era implementar un prototipo básico del núcleo de la aplicación móvil del sistema ALERTAR compuesto por una plataforma base y un conjunto limitado de casos de uso implementados sobre ella, exceptuando la interfaz gráfica. 
+
+En primer lugar, se implementó con éxito la capa de transporte de la aplicación móvil, asegurando la protección de la información confidencial de pacientes a través de comunicaciones seguras. Durante la implementación se desarrolló un manejador de mensajes discretos para su envío y recepción. Además, fue necesario implementar un mecanismo de detección de pérdida de conectividad debido a problemas presentados por la biblioteca utilizada para establecer transmisiones \textit{TLS/TCP}. Para garantizar las comunicaciones seguras se implementó un mecanismo de autenticación de dispositivos junto con un sistema de distribución de certificados digitales. Todo el desarrollo se realizó asegurando la serialización de las operaciones, a fin de evitar errores o estados inconsistentes, garantizando así que las operaciones se procesan en el mismo orden en el llegan al dispositivo encargado de ello.
+
+En segundo lugar, se implementó un mecanismo de tolerancia a fallos basado en la replicación de datos entre dispositivos móviles y la nube. Para esto, se utilizó una arquitectura limpia la cual contempla la implementación de servicios para la comunicación de los diferentes dispositivos del sistema, la implementación de una base de datos y la implementación de casos de uso encargados de ejecutar funcionalidades del sistema. Con esto se abarcaron aspectos como seguridad, modularidad y escalabilidad, dando como resultado un código escalable y de fácil modificación. Además, se realizó una especificación del sistema, la cual incluye un diagrama de la arquitectura limpia utilizada, un diagrama de casos de uso y diagramas de actividades que explican el funcionamiento de los casos de uso implementados más significativos. También se incorporó un ejemplo de diagrama de clases, a fin de retratar cómo está implementada la arquitectura limpia.
+
+En tercer lugar, se verificó el correcto funcionamiento del mecanismo de tolerancia a fallos. Se contemplaron los diferentes tipos de conexión que pueden existir en el sistema y se realizó una validación funcional con casos de usos implementados, la cual verificó el correcto funcionamiento del sistema así como su capacidad de recuperación ante los diferentes tipos de fallos posibles. Se desarrollaron interfaces gráficas para poder ejecutar diferentes casos de uso y procedimientos y así poder evaluar su funcionamiento durante el desarrollo. Además, se realizó una prueba de concurrencia en dispositivos de niebla para evaluar su capacidad para trabajar con múltiples conexiones simultáneas a través de una red de área local desde dispositivos de borde.
+
+Por último, se realizó una evaluación del rendimiento de la aplicación móvil implementada, considerando eficiencia del almacenamiento local de datos y tiempo de ejecución de operaciones básicas del mecanismo de tolerancia a fallos basado en replicación de datos. Obteniendo resultados satisfactorios en ambas pruebas. 
+
+
+
+Todo este trabajo derivó en la validación de la plataforma base e identificación de posibles mejoras arquitectónicas o de implementación. El desarrollo de este prototipo representa un paso significativo hacia la creación de la aplicación móvil del sistema ALERTAR. Las funcionalidades implementadas permiten garantizar comunicaciones seguras, tolerancia a fallos y operación autónoma sin dependencia constante de Internet o disponibilidad de servicios en la nube. Estas capacidades son fundamentales para mejorar la calidad y continuidad de la atención médica en hospitales con recursos tecnológicos reducidos, ofreciendo una herramienta concreta para salvar vidas en entornos críticos.
+\section{Trabajos futuros}
+
+Como continuación de este trabajo de tesis se sugieren los siguientes trabajos futuros:
+\begin{itemize}
+    \item Implementar mecanismos de seguridad para los datos almacenados en memoria secundaria de los dispositivos móviles.
+    \item Agregar datos de manera automática a partir de la información proporcionada por sensores u otro equipamiento médico.
+    \item Aplicar un sistema de compresión de datos.
+    \item Paginar mensajes de capa de aplicación cuando son demasiado grandes para evitar desbordamientos de buffer.
+    \item Aplicar distinciones en los casos de uso en función de si el usuario pertenece al personal médico o de enfermería.
+    \item Investigar cómo ejecutar la aplicación en segundo plano sin que se pierda la conexión con
+    los dispositivos de niebla, y que estos sigan operativos, en el caso de que un usuario la pase a segundo plano.
+\end{itemize}
+
+

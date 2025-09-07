@@ -1,0 +1,216 @@
+%% Template de Tesis de Licenciatura en  Ciencias de la Computación
+%% para la Facultad de Informática, Universidad Nacional del Comahue.
+%% URL: https://faiweb.uncoma.edu.ar/
+%%
+%% El siguiente templete muestra un ejemplo LaTeX que posee el formato requerido por el Reglamento de Tesis de  la Licenciatura en Ciencias de la Computación. 
+
+%% --------------------------------------------------------
+
+\documentclass[11pt,a4paper,spanish]{book}
+\usepackage[a4paper,left=3cm,right=2cm,top=3cm,bottom=2cm]{geometry}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel} %% Hispanización de títulos y otros elementos de LaTeX
+\usepackage{times} %% Times New Roman, requerido por el reglamento.
+\usepackage[es-AR]{datetime2} %% Fecha y hora en formato Argentino.
+\usepackage{graphicx}  %% Incluir imágenes
+%% \usepackage[final]{graphicx} %% Incluir imágenes aún si se activa el modo draft.
+\usepackage{grffile} %% Soporta internacionalización en los nombre de archivos en las imágenes.
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage[normalem]{ulem} %% Subrayado con \ul{}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref} %% Hipervínculos en el índice y otros componentes de LaTeX.
+\usepackage{diagbox}
+\usepackage{fontawesome} %% ¡Fuente FontAwesome https://fontawesome.com/!
+%% P. ej.: \faBug
+\usepackage{enumerate}
+\usepackage{colortbl}
+\usepackage{csquotes}
+
+\usepackage{enumerate} %% Enumeraciones personalizadas 
+\usepackage{color,soulutf8} %% Highlighting/resaltado con \hl  
+
+\usepackage{colortbl}
+\usepackage[x11names]{xcolor}
+
+
+%% Brindar BibLaTeX. Utilizar Biber como programa bibliográfico. Configurar estilo de referencias y citas según el Reglamento de Tesis.
+\usepackage[backend=biber, % style=alphabetic,
+style=numeric, %style=apa,
+maxnames=10, minnames=10,
+backref=true]{biblatex}
+\addbibresource{biblio.bib}
+
+\usepackage{comment}
+\usepackage{times}
+\usepackage{csquotes}
+\usepackage{xspace}
+\usepackage{pdflscape}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{algorithmicx}
+\usepackage{listings}
+\usepackage{float}
+\newfloat{lstfloat}{tbp}{lop}
+\floatname{lstfloat}{Listado de Código}
+\def\lstfloatautorefname{Listado}
+\usepackage[colorinlistoftodos, shadow, loadshadowlibrary]{todonotes}  %% Notas con \todo{} y \todo[inline]{}
+%% P. ej.: \todo[inline]{Escribir esta sección}
+
+%%SVG
+\usepackage{svg}
+\usepackage{pdfpages}
+
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage[newfloat]{minted}
+\usepackage{caption}
+\usepackage{multirow}
+\usepackage{rotating}
+\usepackage{afterpage}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newenvironment{code}{\captionsetup{type=listing,skip=0pt}}{}
+\SetupFloatingEnvironment{listing}{name=Código}
+
+%LISTINGS%
+%JAVASCRIPT/TYPESCRIPT
+\lstdefinelanguage{javaScript}{
+  keywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break,interface},
+  keywordstyle=\color{blue}\bfseries,
+  ndkeywords={class, export, boolean, throw, implements, import, this},
+  ndkeywordstyle=\color{blue}\bfseries,
+  identifierstyle=\color{black},
+  sensitive=false,
+  comment=[l]{//},
+  morecomment=[s]{/*}{*/},
+  commentstyle=\color{purple}\ttfamily,
+  stringstyle=\color{red}\ttfamily,
+  morestring=[b]',
+  morestring=[b]",
+  moredelim=**[is][\color{red}]{*}{*},
+  moredelim=**[is][\color{cyan}]{@}{@},
+}
+
+\definecolor{gray97}{gray}{.97}
+\lstdefinestyle{javaScript}{
+   frame=Ltb,
+   language=JavaScript,
+   framerule=0pt,
+   rulesep=.4pt,
+   backgroundcolor=\color{gray97},
+   rulesepcolor=\color{black},
+   aboveskip=3mm,
+   belowskip=3mm,
+   columns=flexible,
+   extendedchars=true,
+   basicstyle=\small\ttfamily,
+   showstringspaces=false,
+   showspaces=false,
+   numbers=left,
+   numberstyle=\tiny\color{gray},
+   numbersep=9pt,
+   tabsize=2,
+   breaklines=true,
+   showtabs=false,
+   captionpos=b,
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Completar con datos de la Tesis y del Tesista
+
+
+
+\hypersetup{
+ pdfauthor={Nombre del Tesista},
+ pdftitle={Tesis de Licenciatura en Ciencias de la Computación},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={PDFLaTeX}, 
+ pdflang={Spanish}} 
+
+\newcommand{\titulotesis}{Implementación del núcleo lógico prototipo de la aplicación móvil ALERTAR, un sistema para vigilancia y alertas
+tempranas de gravedad en pacientes hospitalizados no
+intensivos}
+\newcommand{\nombretesista}{Manuel Agustin Latorre Rosales}
+\newcommand{\nombredirector}{Javier Balladini}
+%% Agregar Nombre y Apellido del Codirector si corresponde.
+%% Se actualizará automáticamente en el resto del preámbulo.
+\newcommand{\nombrecodirector}{Rodrigo S. Cañibano}
+
+
+\graphicspath{{./Imagenes}}  %%Camino al  directorio de las imágenes
+
+
+
+\begin{document}
+
+\renewcommand{\tablename}{Tabla}
+\renewcommand{\listtablename}{Índice de tablas}
+
+%Empieza la numeración en números romanos
+\frontmatter
+% Incluimos la carátula
+\input{Preambulos/caratula}
+
+% Incluimos la página de prefacio.
+\input{Preambulos/prefacio}
+
+
+% Incluimos la página de dedicatorias. Esta página es opcional.
+% Si la página no quiere ser incluida anteponga el símbolo "%" al comienzo de la siguiente línea
+%\input{Preambulos/dedicatoria}
+
+
+% Incluimos la página de agradecimientos. Esta página es opcional.
+% Si la página no quiere ser incluida anteponga el símbolo "%" al comienzo de la siguiente línea
+%\input{Preambulos/agradecimiento}
+
+% Incluimos la página de resumen
+\input{Preambulos/resumen}
+
+% Incluimos la página de resumen en inglés
+\input{Preambulos/abstract}
+
+% Tabla de contenido o Indice del contenido
+\tableofcontents{}
+
+% Lista de figuras o Indice de figuras
+\listoffigures
+
+% Lista de tablas o Indice de Tablas
+\listoftables
+
+%\renewcommand{\lstlistingname}{Listado de Código}
+%\renewcommand{\lstlistlistingname}{Listado de Código}
+%Lista los Códigos presentados en la tesis
+%\lstlistoflistings
+
+%Empieza la numeración en números arábigos
+\mainmatter
+\input{Capitulos/introduccion}
+\input{Capitulos/marcoTeorico/marcoTeorico}
+\input{Capitulos/arquitecturaGeneral}
+\input{Capitulos/implementacion}
+\input{Capitulos/experimentacion}
+\input{Capitulos/conclusiones}
+\vfill
+\pagebreak
+\nocite{*}
+%\chapter{Referencias bibliográficas}
+%\renewcommand{\refname}{Referencias bibliográficas}
+\label{sec:org6b525e0}
+\addcontentsline{toc}{chapter}{Referencias Bibliográficas}
+\printbibliography[% heading=none,
+title={Referencias Bibliográficas}]
+
+
+%%Si hubiera apéndices:
+\appendix
+\input{Capitulos/apendice}
+
+\end{document}

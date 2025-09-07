@@ -1,0 +1,22 @@
+\label{pagresum}
+\noindent{\LARGE \sc Resumen}\\
+\ \\
+\ \\
+
+\ \\
+
+\ \\
+\ \\
+
+En los hospitales, la monitorización continua y confiable de pacientes representa un desafío crítico, especialmente en aquellos con infraestructura de red limitada o inestable. Los sistemas de triaje automatizado que clasifican pacientes según su nivel de riesgo y optimizan los intervalos de control de enfermería son fundamentales para abordar esta problemática. Sin embargo, su dependencia de servicios en la nube y conectividad a Internet estable presenta limitaciones importantes. Estos sistemas frecuentemente ven comprometida su efectividad en entornos con infraestructura de red heterogénea e intermitente. 
+
+El objetivo de esta tesis es implementar un prototipo básico del núcleo de la aplicación móvil de vigilancia y alertas tempranas del sistema ALERTAR, abordando dichas limitaciones técnicas. El sistema ALERTAR está específicamente diseñado para clasificar pacientes en niveles de gravedad (bajo, moderado, alto y crítico), configurar automáticamente controles de enfermería basados en algoritmos de triaje, y mantener alta resiliencia operacional. A diferencia de las soluciones tradicionales, este sistema opera bajo una arquitectura distribuida Nube-Niebla-Borde que permite a dispositivos móviles funcionar dentro de una red de área local (LAN) y preservar su operatividad incluso cuando la conexión a Internet no está disponible.
+
+La metodología adoptada excluye la interfaz gráfica para concentrarse en una plataforma base con un conjunto limitado de casos de uso. Para lograr esto, se implementó una capa de transporte de datos sobre TLS, desarrollando un protocolo de mensajes discretos y un mecanismo dinámico de distribución y validación de certificados para autenticar los dispositivos. Se adoptó una arquitectura limpia para asegurar la modularidad y mantenibilidad del sistema. Además, se implementó un mecanismo de detección de pérdida de conectividad y un sistema de replicación de datos para asegurar la consistencia y la tolerancia a fallos entre los dispositivos móviles (borde y niebla) y la nube.
+
+Las pruebas funcionales realizadas demostraron que el sistema es capaz de recuperarse de fallos de conectividad y de dispositivos, manteniendo la integridad de los datos en distintos escenarios operativos. Las evaluaciones de rendimiento indicaron una sobrecarga de almacenamiento y transmisión de datos aceptable. Las pruebas de estrés, con hasta 64 dispositivos concurrentes, confirmaron la capacidad del sistema para gestionar una carga elevada sin fallos, asegurando la robustez de la solución.
+
+El prototipo básico del núcleo de la aplicación móvil implementado para el sistema ALERTAR cumple con los objetivos de resiliencia y fiabilidad. Esto sienta una base sólida para un sistema de monitoreo y alerta temprana capaz de mejorar la calidad de la atención en hospitales con recursos tecnológicos limitados. El trabajo futuro se centrará en optimizar la arquitectura, implementar funcionalidades adicionales y mejorar la seguridad de los datos en reposo.
+
+\vfill
+\pagebreak

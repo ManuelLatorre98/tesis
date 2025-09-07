@@ -1,0 +1,23 @@
+\ \\
+\ \\
+\label{pagsumm}
+\noindent{\LARGE \sc Abstract}\\
+\ \\
+\ \\
+
+\ \\
+
+\ \\
+\ \\
+In hospitals, achieving continuous and reliable patient monitoring represents a critical challenge, particularly in those with limited or unstable network infrastructure. Automated triage systems that classify patients according to their risk level and optimize nursing control intervals are fundamental to addressing this issue. However, their dependence on cloud services and stable Internet connectivity presents significant limitations. These systems frequently experience compromised effectiveness in environments with heterogeneous and intermittent network infrastructure.
+
+The objective of this thesis is to implement a basic prototype of the core mobile application for surveillance and early alerts within the ALERTAR system, addressing these technical limitations. The ALERTAR system is specifically designed to classify patients into severity levels (low, moderate, high, and critical), automatically configure nursing controls based on triage algorithms, and maintain high operational resilience. Unlike traditional solutions, this system operates under a Cloud-Fog-Edge distributed architecture that allows mobile devices to function within a local area network (LAN) and preserve their operability even when Internet connection is unavailable.
+
+The adopted methodology excludes the graphical interface to focus on a base platform with a limited set of use cases. To achieve this, a data transport layer over TLS was implemented, developing a discrete message protocol and a dynamic mechanism for certificate distribution and validation to authenticate devices. A clean architecture was adopted to ensure system modularity and maintainability. Additionally, a connectivity loss detection mechanism and a data replication system were implemented to ensure consistency and fault tolerance between mobile devices (edge and fog) and the cloud.
+
+Functional tests demonstrated that the system is capable of recovering from connectivity and device failures while maintaining data integrity across different operational scenarios. Performance evaluations indicated acceptable storage and data transmission overhead. Stress tests with up to 64 concurrent devices confirmed the system's ability to handle high loads without failure, ensuring solution robustness.
+
+The basic prototype of the mobile application core implemented for the ALERTAR system meets the objectives of resilience and reliability. This establishes a solid foundation for a monitoring and early alert system capable of improving quality of care in hospitals with limited technological resources. Future work will focus on optimizing the architecture, implementing additional functionalities, and improving data security at rest.
+
+\vfill
+\pagebreak

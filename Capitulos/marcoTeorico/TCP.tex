@@ -1,0 +1,57 @@
+Este capítulo plantea las bases conceptuales que sustentan las metodologías y tecnologías empleadas en el desarrollo y la implementación del núcleo del sistema ALERTAR, además de exponer las definiciones y terminología a utilizar a lo largo del trabajo de tesis. %Se comienza explorando el Protocolo de Control de Transmisión (TCP), que es fundamental para la transmisión confiable de datos en redes de computadoras. Luego, se aborda la seguridad de las comunicaciones, con un enfoque específico en el cifrado asimétrico junto con el uso de certificados de claves públicas para garantizar la confidencialidad, autenticidad e integridad de los mensajes. Después, se explora la arquitectura limpia, un enfoque que promueve un diseño de software robusto y mantenible. Finalmente, se discute la arquitectura \textit{Cloud-Fog-Edge Computing}, que representa una evolución en la computación distribuida, integrando capacidades de procesamiento y almacenamiento desde la nube hasta el borde de la red.
+
+En la sección \ref{sec:TCP} se presenta el protocolo TCP junto con los aspectos teóricos más relevantes. En la sección \ref{sec:segDeLasComun} se detallan las propiedades necesarias para asegurar la seguridad de las comunicaciones, se describe cifrado asimétrico, certificados de claves públicas, verificación de validez de certificados y diferentes métodos para su implementación y distribución, finalizando con una explicación del protocolo \textit{TLS}. En la sección \ref{sec:arqLimpia} se describe qué es y cómo funciona una arquitectura limpia. Por último, en la sección \ref{sec:cloud-fog-edge} se describe arquitectura \textit{Cloud-Fog-Edge Computing} y se detalla la responsabilidad y funcionalidad de cada una de sus capas.
+\section{TCP}
+\label{sec:TCP}
+TCP \textit{(Transmission Control Protocol)} es un protocolo fundamental en las redes de computadoras para la transmisión de datos. Es un protocolo orientado a la conexión, lo que implica que dos aplicaciones deben establecer una conexión previa mediante un proceso denominado ``handshake'' antes de intercambiar información. Este proceso de tres pasos asegura que ambos extremos estén sincronizados y listos para intercambiar datos de manera efectiva.
+
+Una vez establecida la conexión, TCP garantiza la entrega ordenada de los datos mediante el uso de números de secuencia. Cada segmento de datos enviado incluye un número de secuencia que indica la posición del primer byte del segmento dentro del flujo de datos. Esto permite que los datos sean reordenados en el destino en caso de llegar fuera de orden, y que se detecten y eliminen duplicados. La transmisión ordenada es crucial para aplicaciones que requieren que los datos lleguen en el mismo orden en que fueron enviados.
+
+TCP ofrece un servicio de \textit{full-duplex}, permitiendo que los datos fluyan simultáneamente en ambas direcciones. Cada extremo de la conexión mantiene un número de secuencia independiente para cada dirección, y los segmentos TCP incluyen un campo de reconocimiento (ACK) para confirmar la recepción de datos en la dirección opuesta \cite{tcpillustratedvol1}.
+
+La fiabilidad es otra característica clave de TCP. En caso de pérdida de datos, TCP retransmite los segmentos no reconocidos por el receptor dentro de un tiempo determinado. Utiliza un temporizador de retransmisión que se actualiza cada vez que se recibe un ACK. Si no se recibe un ACK dentro del tiempo esperado, el segmento se retransmite. Este mecanismo asegura que todos los datos lleguen a destino sin pérdidas.
+
+TCP utiliza una suma de comprobación para verificar la integridad de los datos transmitidos. Esta suma de comprobación se calcula sobre el encabezado TCP, los datos transmitidos y el pseudo-encabezado \textit{IP}, el cual incluye la dirección \textit{IP} de origen, la dirección \textit{IP} de destino, el protocolo y la longitud total del segmento TCP. Si se detecta un error en la suma de comprobación, el segmento de datos se descarta y no se envía ninguna confirmación para ese segmento. De esta manera TCP asegura que sólo los datos libres de errores sean aceptados y procesados.
+
+
+TCP incorpora mecanismos de control de flujo y control de congestión:
+\begin{itemize}
+    \item \textbf{Control de Flujo: }utiliza una ventana deslizante que permite al receptor controlar la cantidad de datos que el emisor puede enviar antes de recibir una confirmación. Esto evita que el receptor se vea abrumado por una cantidad excesiva de datos.
+    \item \textbf{Control de Congestión: }Ajusta dinámicamente la velocidad de transmisión de datos en función de la capacidad de la red y las condiciones actuales de congestión. Esto ayuda a prevenir la sobrecarga de la red y asegura una transmisión fluida.
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%TCP \textit{(Transmission Control Protocol)}de comunicación utilizado en redes de computadoras para la transmisión de datos. Proporciona una conexión confiable y orientada a la conexión entre dos aplicaciones a través de una red. TCP garantiza la entrega ordenada y sin errores de un flujo de datos, controlando la transmisión y recepción de los paquetes de datos entre dispositivos conectados.
+
+%El término ``orientado a conexión'' en el contexto de TCP implica que dos aplicaciones deben establecer una conexión previa mediante un proceso denominado \textit{handshake} antes de intercambiar información. Esta conexión se asemeja al saludo y apretón de manos entre dos personas antes de iniciar una conversación. En este proceso, ambas partes acuerdan establecer una conexión y se aseguran de estar listas para intercambiar información. De manera similar, en el handshake de TCP, dos dispositivos establecen una conexión, confirman su disposición para intercambiar datos y sincronizan sus estados antes de comenzar la transmisión de información. Este proceso es un paso fundamental para garantizar una comunicación efectiva y ordenada entre los sistemas.
+
+%TCP proporciona una abstracción de flujo de bytes a las aplicaciones que lo utilizan. En consecuencia TCP no inserta automáticamente \textit{marcadores de registro} ni límites de mensajes. Un marcador de registro se corresponde a un índice del alcance de escritura de una aplicación. Si la aplicación de un lado escribe 10 bytes, seguido por la escritura de otros 20 bytes, seguidos por otros 50 bytes, la aplicación al otro lado de la conexión no puede determinar la longitud de las escrituras individuales. Por ejemplo, el receptor podría leer 80 bytes en cuatro tandas de 20 bytes, podría leerlo en tandas como se planteó originalmente o en una combinación diferente de longitudes. Cada extremo de la conexión pone un flujo de datos en TCP, y el mismo flujo de bytes aparece en el otro extremo. Cada punto de destino o \textit{end point} elige de manera particular sus tamaños de escritura y lectura.
+
+%TCP no interpreta el contenido de los bytes dentro del flujo. Este no tiene idea de si los bytes de información son datos binarios, caracteres ASCII, caracteres EBCDIC, o de algún otro tipo. La interpretación del flujo de bytes es responsabilidad de cada extremo de la conexión \cite{tcpillustratedvol1}.
+
+%\subsubsection{Fiabilidad en TCP} 
+
+%Al proveer una interfaz de flujo de bytes, TCP debe convertir los flujos de bytes salientes en un conjunto de paquetes que IP pueda transportar. Esto se denomina \textit{Empaquetado}. Estos paquetes contienen números de secuencia que, en TCP, representan los desplazamientos de los bytes en el flujo de datos general, en lugar de enumerar directamente cada paquete. El número de secuencia indica la posición del primer byte del paquete dentro del flujo. Esto permite que los paquetes sean de tamaño variable durante la transferencia y también permite que se combinen, proceso el cual se denomina \textit{re-empaquetado}. Los datos de la aplicación se dividen en lo que TCP considera los fragmentos de mejor tamaño para enviar, generalmente ajustando cada segmento en un único datagrama de capa IP que no se fragmentará. Los fragmentos pasados de TCP a IP se denominan \textit{segmentos}.
+
+%TCP realiza un control de integridad mediante una \textit{suma de comprobación (checksum)} en su encabezado, así como en cualquier dato de aplicación asociado y algunos campos del encabezado IP. Esta suma de comprobación es obligatoria y tiene como objetivo detectar posibles errores de bits que puedan haberse introducido durante la transmisión. Si un segmento llega con una suma de comprobación inválida, TCP lo descarta sin enviar ninguna confirmación para el paquete descartado. Sin embargo, el receptor TCP podría confirmar la recepción de un segmento anterior (ya confirmado) para ayudar al remitente en sus cálculos de control de congestión. La suma de comprobación utilizada por TCP es la misma función matemática utilizada por otros protocolos de Internet (UDP, ICMP, etc.)
+
+%Cuando TCP envía un conjunto de segmentos, suele establecer un temporizador de retransmisión que espera el \textit{reconocimiento (ACK)} de recepción desde el otro extremo de la conexión. TCP no configura temporizadores de retransmisión distintos para cada segmento. En cambio, establece un temporizador al enviar una ventana de datos y actualiza el tiempo de vencimiento cada vez que recibe un ACK. Si no se recibe un ACK dentro del plazo establecido, el segmento se retransmite.
+
+%Cuando TCP recibe información desde el extremo opuesto de la conexión, responde enviando un reconocimiento (ACK). Este reconocimiento no siempre se transmite inmediatamente, sino que usualmente es retrasado una fracción de segundo. Los ACKs utilizados por TCP son ``acumulativos'' en el sentido de que un ACK que indica el número de byte $N$ implica que todos los bytes hasta ese número $N$ (sin incluirlo) ya fueron recibidos de manera exitosa. Esto provee robustez frente a la pérdida de ACK. Si un ACK se pierde, es muy probable que un ACK posterior sea suficiente para indicar el reconocimiento de segmentos previamente enviados.
+
+%TCP proporciona un servicio de \textit{full-duplex} a la capa de aplicación, permitiendo que la información fluya en ambas direcciones de manera independiente. En consecuencia, cada extremo de la conexión debe mantener un número de secuencia para el flujo de datos en cada dirección. Una vez establecida la conexión, cada segmento TCP que transporta información en una dirección, incluye un ACK para los segmentos en la dirección opuesta. Además, cada segmento contiene una ventana de anuncios para implementar el control de flujo en la dirección opuesta. Cuando llega un segmento TCP en una conexión, la ventana puede deslizarse hacia adelante, el tamaño de la ventana puede cambiar y nuevos datos pueden haber llegado. Este mecanismo asegura la bidireccionalidad y la independencia del flujo de datos en una conexión TCP.
+
+%Utilizando los números de secuencia, el receptor TCP descarta los segmentos duplicados y reordena aquellos que lleguen desordenados. Esto se hace debido a que TCP utiliza IP para enviar los segmentos, e IP no provee eliminación de duplicados ni garantiza el orden correcto de recepción. Como se trata de un protocolo de flujo de bytes, TCP nunca envía información fuera de orden. Por lo tanto, el receptor TCP puede verse obligado a retener datos con números de secuencia más grandes antes de entregarlos a una aplicación hasta que se complete la recepción de un segmento como un número de secuencia inferior el cual generaba un ``hueco'' \cite{tcpillustratedvol1}.
