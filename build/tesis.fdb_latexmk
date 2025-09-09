@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber build/tesis"] 1757271799.18832 "build/tesis.bcf" "build/tesis.bbl" "build/tesis" 1757277925.65196 0
-  "biblio.bib" 1757160223 11650 cd0550ecfc54b1741b822feede394590 ""
-  "build/tesis.bcf" 1757277925 111660 ed0c5d15066b399b698df5c92fdb8898 "pdflatex"
+["biber build/tesis"] 1757459632.78943 "build/tesis.bcf" "build/tesis.bbl" "build/tesis" 1757459659.41018 0
+  "biblio.bib" 1757459630 11650 1df9cdfa0f427fd060757c31d5fe34a1 ""
+  "build/tesis.bcf" 1757459658 111660 ed0c5d15066b399b698df5c92fdb8898 "pdflatex"
   (generated)
   "build/tesis.bbl"
   "build/tesis.blg"
   (rewritten before read)
-["pdflatex"] 1757277918.29322 "c:/Users/manul/OneDrive/Escritorio/Tesis_LCC___Manuel_Latorre_C2/tesis.tex" "build/tesis.pdf" "tesis" 1757277925.65302 0
+["pdflatex"] 1757459652.1519 "c:/Users/manul/OneDrive/Escritorio/Tesis_LCC___Manuel_Latorre_C2/tesis.tex" "build/tesis.pdf" "tesis" 1757459659.4113 0
   "C:/Users/manul/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1757159788 229993 f84325ec72fd88854bdeaf3234f9a989 ""
   "C:/Users/manul/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1757159774 13257383 3920f811faca7fc63df90fc4d40a474b ""
   "C:/Users/manul/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -339,15 +339,15 @@
   "Preambulos/caratula.tex" 1757169876 749 3a84978c1af89c27a80a509551098ef2 ""
   "Preambulos/prefacio.tex" 1757169876 1462 8e859edb9587d3fa93f477a662cb9077 ""
   "Preambulos/resumen.tex" 1757165668 3136 118f61e22f22ecdc57fc8c0c81e51884 ""
-  "build/tesis.aux" 1757277925 30835 30a9585d8dafdf8901a5f87cf439636f "pdflatex"
-  "build/tesis.bbl" 1757271802 62735 9defc0c84c5cf088b85c5bd45ee0de9c "biber build/tesis"
-  "build/tesis.lof" 1757277925 4429 bd683b4befbc587f9f996ab3c5a67260 "pdflatex"
-  "build/tesis.lot" 1757277925 864 75b245b78a6e9f6ef70b9b8ba520bd49 "pdflatex"
-  "build/tesis.out" 1757277925 9738 47a26856b324bb8335b1703954c162e3 "pdflatex"
-  "build/tesis.run.xml" 1757277925 2308 da5268ad9900e11ed55efb0756e102be "pdflatex"
-  "build/tesis.toc" 1757277925 4540 a1bf01ad7138c3607e308017c41ced99 "pdflatex"
-  "c:/Users/manul/OneDrive/Escritorio/Tesis_LCC___Manuel_Latorre_C2/tesis.tex" 1757271620 6560 fa45ded2ff8e29796933e08316b493b8 ""
-  "tesis.tex" 1757271620 6560 fa45ded2ff8e29796933e08316b493b8 ""
+  "build/tesis.aux" 1757459658 30835 8985ba2df207f1fe906ab2be3331e0f5 "pdflatex"
+  "build/tesis.bbl" 1757459641 62735 d1ff3d9ee42e1252b6fe8e9b514a56cc "biber build/tesis"
+  "build/tesis.lof" 1757459658 4429 bd683b4befbc587f9f996ab3c5a67260 "pdflatex"
+  "build/tesis.lot" 1757459658 864 75b245b78a6e9f6ef70b9b8ba520bd49 "pdflatex"
+  "build/tesis.out" 1757459658 9738 47a26856b324bb8335b1703954c162e3 "pdflatex"
+  "build/tesis.run.xml" 1757459658 2308 da5268ad9900e11ed55efb0756e102be "pdflatex"
+  "build/tesis.toc" 1757459658 4540 a1bf01ad7138c3607e308017c41ced99 "pdflatex"
+  "c:/Users/manul/OneDrive/Escritorio/Tesis_LCC___Manuel_Latorre_C2/tesis.tex" 1757459644 6531 6e521043002ae6585a6f84f3327a7a65 ""
+  "tesis.tex" 1757459644 6531 6e521043002ae6585a6f84f3327a7a65 ""
   (generated)
   "build/tesis.aux"
   "build/tesis.bcf"

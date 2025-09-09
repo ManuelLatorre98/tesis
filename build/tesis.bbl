@@ -996,7 +996,7 @@
       \field{labeltitlesource}{title}
       \field{booktitle}{Facultad de Informática, Universidad Nacional del Comahue}
       \field{note}{\{manuel.latorre, mariano.conchillo, rcanibano, javier.balladini\}@fi.uncoma.edu.ar}
-      \field{title}{Un prototipo básico del núcleo de la aplicación móvil de ALERTAR, un sistema distribuido y resiliente para la vigilancia de pacientes no intensivos}
+      \field{title}{Implementación del núcleo de la aplicación móvil de ALERTAR, un sistema para vigilancia de pacientes hospitalizados y alertas tempranas de gravedad}
       \field{year}{2024}
     \endentry
     \entry{lee2018systematic}{article}{}{}

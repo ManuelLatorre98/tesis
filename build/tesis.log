@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.9.6)  7 SEP 2025 17:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.9.6)  9 SEP 2025 20:14
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1159,7 +1159,7 @@ Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'spanish'.
-LaTeX Font Info:    Trying to load font information for T1+ptm on input line 150.
+LaTeX Font Info:    Trying to load font information for T1+ptm on input line 148.
  (C:\Users\manul\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 ) (c:\Users\manul\OneDrive\Escritorio\Tesis_LCC___Manuel_Latorre_C2\build\tesis.aux
@@ -1170,24 +1170,24 @@ Package babel Info: 'spanish' activates 'spanish' shorthands.
 )
 \openout1 = `tesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 150.
-LaTeX Font Info:    ... okay on input line 150.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 150.
-LaTeX Font Info:    ... okay on input line 150.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 150.
-LaTeX Font Info:    ... okay on input line 150.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 150.
-LaTeX Font Info:    ... okay on input line 150.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 150.
-LaTeX Font Info:    ... okay on input line 150.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 150.
-LaTeX Font Info:    ... okay on input line 150.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 150.
-LaTeX Font Info:    ... okay on input line 150.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 150.
-LaTeX Font Info:    ... okay on input line 150.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 150.
-LaTeX Font Info:    ... okay on input line 150.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 148.
+LaTeX Font Info:    ... okay on input line 148.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 148.
+LaTeX Font Info:    ... okay on input line 148.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 148.
+LaTeX Font Info:    ... okay on input line 148.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 148.
+LaTeX Font Info:    ... okay on input line 148.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 148.
+LaTeX Font Info:    ... okay on input line 148.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 148.
+LaTeX Font Info:    ... okay on input line 148.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 148.
+LaTeX Font Info:    ... okay on input line 148.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 148.
+LaTeX Font Info:    ... okay on input line 148.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 148.
+LaTeX Font Info:    ... okay on input line 148.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1223,8 +1223,8 @@ LaTeX Font Info:    ... okay on input line 150.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Redefining \. on input line 150.
-LaTeX Info: Redefining \% on input line 150.
+LaTeX Info: Redefining \. on input line 148.
+LaTeX Info: Redefining \% on input line 148.
 (C:\Users\manul\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count542
@@ -1244,7 +1244,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (C:\Users\manul\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring OFF on input line 150.
+Package hyperref Info: Link coloring OFF on input line 148.
  (c:\Users\manul\OneDrive\Escritorio\Tesis_LCC___Manuel_Latorre_C2\build\tesis.out) (c:\Users\manul\OneDrive\Escritorio\Tesis_LCC___Manuel_Latorre_C2\build\tesis.out)
 \@outlinefile=\write7
 \openout7 = `tesis.out'.
@@ -1262,8 +1262,8 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'tesis.bbl' found.
  (c:\Users\manul\OneDrive\Escritorio\Tesis_LCC___Manuel_Latorre_C2\build\tesis.bbl)
-Package biblatex Info: Reference section=0 on input line 150.
-Package biblatex Info: Reference segment=0 on input line 150.
+Package biblatex Info: Reference section=0 on input line 148.
+Package biblatex Info: Reference segment=0 on input line 148.
 \c@lstlisting=\count548
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: rotating package is loaded.
@@ -1424,10 +1424,10 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 
 
-LaTeX Info: Redefining \. on input line 183.
-LaTeX Info: Redefining \% on input line 183.
+LaTeX Info: Redefining \. on input line 181.
+LaTeX Info: Redefining \% on input line 181.
 Package babel Info: 'spanish' activates 'spanish' shorthands.
-(babel)             Reported on input line 183.
+(babel)             Reported on input line 181.
 [6] (c:\Users\manul\OneDrive\Escritorio\Tesis_LCC___Manuel_Latorre_C2\build\tesis.lof
 LaTeX Info: Redefining \sptext on input line 1.
 LaTeX Info: Redefining \. on input line 1.
@@ -1442,8 +1442,8 @@ LaTeX Info: Redefining \% on input line 1.
 
 ]
 
-LaTeX Info: Redefining \. on input line 186.
-LaTeX Info: Redefining \% on input line 186.
+LaTeX Info: Redefining \. on input line 184.
+LaTeX Info: Redefining \% on input line 184.
 [8
 
 ] (c:\Users\manul\OneDrive\Escritorio\Tesis_LCC___Manuel_Latorre_C2\build\tesis.lot
@@ -1458,8 +1458,8 @@ LaTeX Info: Redefining \% on input line 1.
 
 [9]
 
-LaTeX Info: Redefining \. on input line 194.
-LaTeX Info: Redefining \% on input line 194.
+LaTeX Info: Redefining \. on input line 192.
+LaTeX Info: Redefining \% on input line 192.
 [10
 
 ] (Capitulos/introduccion.tex
@@ -1983,26 +1983,26 @@ Cap\'{\i }tulo 6.
 
 [57])
 
-LaTeX Info: Redefining \. on input line 203.
-LaTeX Info: Redefining \% on input line 203.
+LaTeX Info: Redefining \. on input line 201.
+LaTeX Info: Redefining \% on input line 201.
 [58]
 
 [59
 
 ]
-Overfull \hbox (5.19016pt too wide) in paragraph at lines 209--209
+Overfull \hbox (5.19016pt too wide) in paragraph at lines 207--207
 \T1/ptm/m/it/10.95 tient Saf \T1/ptm/m/n/10.95 (2018). Epub ahead of print 25 April 2018. \T1/ptm/m/sc/10.95 doi\T1/ptm/m/n/10.95 : []$\T1/pcr/m/n/10.95 10 . 1097 / PTS . 0000000000000492$[]
  []
 
 
-Overfull \hbox (5.17601pt too wide) in paragraph at lines 209--209
+Overfull \hbox (5.17601pt too wide) in paragraph at lines 207--207
 []\T1/ptm/m/n/10.95 Rapsssito. \T1/ptm/m/it/10.95 React Na-ti-ve TCP soc-ket API for An-dro-id, iOS & ma-cOS with SS-L/TLS sup-port\T1/ptm/m/n/10.95 . []$\T1/pcr/m/n/10.95 https :
  []
 
 
 
-LaTeX Info: Redefining \. on input line 208.
-LaTeX Info: Redefining \% on input line 208.
+LaTeX Info: Redefining \. on input line 206.
+LaTeX Info: Redefining \% on input line 206.
 [60] (Capitulos/apendice.tex
 
 LaTeX Info: Redefining \. on input line 1.
@@ -2083,10 +2083,10 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 [69]
 
-LaTeX Info: Redefining \. on input line 216.
-LaTeX Info: Redefining \% on input line 216.
+LaTeX Info: Redefining \. on input line 214.
+LaTeX Info: Redefining \% on input line 214.
 [70]
-runsystem(latexminted cleantemp  --timestamp 20250907174518 04A3511FB91E3313EE47AAE4731CFC7A)...disabled (restricted).
+runsystem(latexminted cleantemp  --timestamp 20250909201412 04A3511FB91E3313EE47AAE4731CFC7A)...disabled (restricted).
 
  (c:\Users\manul\OneDrive\Escritorio\Tesis_LCC___Manuel_Latorre_C2\build\tesis.aux
 LaTeX Info: Redefining \sptext on input line 13.
@@ -2110,13 +2110,13 @@ Package logreq Info: Writing requests to 'tesis.run.xml'.
 Here is how much of TeX's memory you used:
  46832 strings out of 468132
  940857 string characters out of 5430692
- 1910975 words of memory out of 5000000
+ 1910946 words of memory out of 5000000
  74373 multiletter control sequences out of 15000+600000
  712237 words of font info for 120 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,12n,118p,1270b,2346s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/manul/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/manul/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/manul/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/manul/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/manul/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/manul/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/manul/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/manul/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/manul/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/manul/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/manul/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on c:\Users\manul\OneDrive\Escritorio\Tesis_LCC___Manuel_Latorre_C2\build\tesis.pdf (80 pages, 18981155 bytes).
+Output written on c:\Users\manul\OneDrive\Escritorio\Tesis_LCC___Manuel_Latorre_C2\build\tesis.pdf (80 pages, 18981110 bytes).
 PDF statistics:
  1631 PDF objects out of 1728 (max. 8388607)
  294 named destinations out of 1000 (max. 500000)
