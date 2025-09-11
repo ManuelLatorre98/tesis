@@ -496,7 +496,7 @@ En la primera columna se detalla, de manera resumida, el procedimiento que se es
 
 \section{Mejoras al diseño arquitectónico}
 
-El desarrollo de este prototipo básico permitió identificar diversas necesidades y aspectos a mejorar en el diseño arquitectónico. A través de la experiencia práctica de implementación, se detectaron ciertas limitaciones y oportunidades de optimización que pueden guiar futuras iteraciones del sistema.
+El desarrollo de este prototipo básico permitió identificar diversas necesidades y aspectos a mejorar en el diseño arquitectónico. A través de la experiencia práctica de implementación, se detectaron ciertas limitaciones y oportunidades de mejora de diseño que pueden guiar futuras iteraciones del sistema.
 
 \subsubsection{Separación de responsabilidades en la capa de datos}
 
@@ -506,12 +506,13 @@ Una mejora arquitectónica sería considerar la separación de las responsabilid
 
 \subsubsection{Acoplamiento entre casos de uso y repositorios}
 
-La implementación actual requiere que cada caso de uso conozca e interactúe directamente con múltiples repositorios específicos. Esta dependencia directa genera un acoplamiento que puede complicar la incorporación de nuevos repositorios o la modificación de los existentes, ya que requiere cambios en los casos de uso correspondientes.
+El diseño actual presenta múltiples repositorios específicos por separado, lo cual implica la especificación de transacciones de base de datos sobre la implementación de estos para ejecutar, de forma atómica, operaciones que involucren múltiples repositorios o fuentes de datos. De esta forma, el repositorio asume responsabilidades que trascienden su función primaria de orquestación de casos de uso, ya que se adentra en el manejo directo de detalles técnicos de persistencia. Esta mezcla de responsabilidades genera un acoplamiento fuerte entre la lógica de negocio y los mecanismos específicos de almacenamiento y acceso a datos ya que se violan los principios de responsabilidad única y separación de capas.
 
-Una mejora sería la introducción de un patrón de abstracción que permita a los casos de uso interactuar con una interfaz unificada para acceder a los repositorios, reduciendo así el acoplamiento y facilitando la extensibilidad del sistema.
+Dada la necesidad de manejar transacciones que involucren múltiples repositorios, se podría considerar la introducción de un gestor de repositorios. Este componente adicional se encargaría de coordinar las operaciones entre los diferentes repositorios mediante transacciones de negocio atómicas, permitiendo que cada uno mantenga su enfoque en la gestión de datos sin asumir responsabilidades técnicas relacionadas con la gestión de transacciones de bases de datos o detalles específicos de persistencia.
 
-\subsubsection{Gestión de roles de dispositivos en casos de uso}
+%todo DUDA: queda clara la diferencia entre transaccion de negocio y transacción de base de datos?
+%\subsubsection{Gestión de roles de dispositivos en casos de uso}
 
-Durante el desarrollo se evidenció que los dispositivos de niebla y de borde presentan comportamientos distintos al ejecutar los mismos casos de uso. La implementación actual maneja estas diferencias dentro de cada caso implementando un método específico para cada tipo de dispositivo (niebla o borde), lo que genera complejidad a la hora de interpretar el código y flujo del sistema.
+%Durante el desarrollo se evidenció que los dispositivos de niebla y de borde presentan comportamientos distintos al ejecutar los mismos casos de uso. La implementación actual maneja estas diferencias dentro de cada caso implementando un método específico para cada tipo de dispositivo (niebla o borde), lo que genera complejidad a la hora de interpretar el código y flujo del sistema.
 
-Una aproximación alternativa sería considerar implementaciones específicas de casos de uso para cada tipo de dispositivo haciendo uso de una interfaz, permitiendo una lógica más clara y mantenible para cada contexto de ejecución.
+%Una aproximación alternativa sería considerar implementaciones específicas de casos de uso para cada tipo de dispositivo haciendo uso de una interfaz, permitiendo una lógica más clara y mantenible para cada contexto de ejecución.
