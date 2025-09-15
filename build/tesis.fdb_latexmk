@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber build/tesis"] 1757460243.03916 "build/tesis.bcf" "build/tesis.bbl" "build/tesis" 1757554271.21772 0
+["biber build/tesis"] 1757460243.03916 "build/tesis.bcf" "build/tesis.bbl" "build/tesis" 1757970138.95894 0
   "biblio.bib" 1757460241 11650 28c9ec40735e1266cceb7165908cc74a ""
-  "build/tesis.bcf" 1757554270 111660 ed0c5d15066b399b698df5c92fdb8898 "pdflatex"
+  "build/tesis.bcf" 1757970138 111660 ed0c5d15066b399b698df5c92fdb8898 "pdflatex"
   (generated)
   "build/tesis.bbl"
   "build/tesis.blg"
   (rewritten before read)
-["pdflatex"] 1757554264.20606 "c:/Users/manul/OneDrive/Escritorio/Tesis_LCC___Manuel_Latorre_C2/tesis.tex" "build/tesis.pdf" "tesis" 1757554271.2188 0
+["pdflatex"] 1757970128.98966 "c:/Users/manul/OneDrive/Escritorio/Tesis_LCC___Manuel_Latorre_C2/tesis.tex" "build/tesis.pdf" "tesis" 1757970138.95999 0
   "C:/Users/manul/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1757159788 229993 f84325ec72fd88854bdeaf3234f9a989 ""
   "C:/Users/manul/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1757159774 13257383 3920f811faca7fc63df90fc4d40a474b ""
   "C:/Users/manul/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -291,7 +291,7 @@
   "Capitulos/arquitecturaGeneral.tex" 1757169876 8229 e503729a412e00982281a23163e55a7a ""
   "Capitulos/conclusiones.tex" 1757277917 4961 4d618279f13b592ddaa0b8b9ddf02281 ""
   "Capitulos/experimentacion.tex" 1757169876 20779 3a55931d9016e8665515c065c751db53 ""
-  "Capitulos/implementacion.tex" 1757554263 62456 8b68048926b9ce56d8f7e053c4a28199 ""
+  "Capitulos/implementacion.tex" 1757970126 62508 96890be95eefea97913384ce49d9c9d1 ""
   "Capitulos/introduccion.tex" 1757163894 14992 ffae0e77e5ebc85a392ca2d5f316a794 ""
   "Capitulos/marcoTeorico/Arquitectura Cloud-Fog-Edge Computing.tex" 1757169876 2755 67fdb96fd603939f9c87a8662332e75a ""
   "Capitulos/marcoTeorico/Arquitectura de la aplicacion movil.tex" 1757169876 5560 bbfed111b2f854cc953fe32bade6d5a7 ""
@@ -339,13 +339,13 @@
   "Preambulos/caratula.tex" 1757169876 749 3a84978c1af89c27a80a509551098ef2 ""
   "Preambulos/prefacio.tex" 1757169876 1462 8e859edb9587d3fa93f477a662cb9077 ""
   "Preambulos/resumen.tex" 1757165668 3136 118f61e22f22ecdc57fc8c0c81e51884 ""
-  "build/tesis.aux" 1757554270 30695 5b5a7ee3b9c7fbb4ff0d85f67f13a81a "pdflatex"
+  "build/tesis.aux" 1757970138 30695 5b5a7ee3b9c7fbb4ff0d85f67f13a81a "pdflatex"
   "build/tesis.bbl" 1757460250 62735 d1ff3d9ee42e1252b6fe8e9b514a56cc "biber build/tesis"
-  "build/tesis.lof" 1757554270 4429 b1bad0998886676932332ba8ce5b8208 "pdflatex"
-  "build/tesis.lot" 1757554270 864 8dbcc24fcf86213f8dd8a2889984d6a8 "pdflatex"
-  "build/tesis.out" 1757554270 9738 47a26856b324bb8335b1703954c162e3 "pdflatex"
-  "build/tesis.run.xml" 1757554270 2308 da5268ad9900e11ed55efb0756e102be "pdflatex"
-  "build/tesis.toc" 1757554270 4441 2410a84f4bab043f8ce8402ab1816394 "pdflatex"
+  "build/tesis.lof" 1757970138 4429 b1bad0998886676932332ba8ce5b8208 "pdflatex"
+  "build/tesis.lot" 1757970138 864 8dbcc24fcf86213f8dd8a2889984d6a8 "pdflatex"
+  "build/tesis.out" 1757970138 9738 47a26856b324bb8335b1703954c162e3 "pdflatex"
+  "build/tesis.run.xml" 1757970138 2308 da5268ad9900e11ed55efb0756e102be "pdflatex"
+  "build/tesis.toc" 1757970138 4441 2410a84f4bab043f8ce8402ab1816394 "pdflatex"
   "c:/Users/manul/OneDrive/Escritorio/Tesis_LCC___Manuel_Latorre_C2/tesis.tex" 1757459644 6531 6e521043002ae6585a6f84f3327a7a65 ""
   "tesis.tex" 1757459644 6531 6e521043002ae6585a6f84f3327a7a65 ""
   (generated)
