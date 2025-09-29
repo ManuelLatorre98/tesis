@@ -12,7 +12,7 @@ Se requiere del establecimiento de un canal seguro de comunicación que contempl
 
 La aplicación trabaja con mensajes discretos, pero al utilizar TCP se tiene un flujo de bytes. Por ello, es necesario un mecanismo que permita al receptor identificar en qué byte comienza y termina un mensaje. Inicialmente se consideró el uso de WebSocket \cite{fette2011websocket} ya que garantiza una conexión persistente, bidireccional y de baja latencia, sumado que los datos se transmiten como mensajes discretos. Además, opera sobre el protocolo TCP y hace uso de TLS para proveer seguridad de las comunicaciones. Sin embargo, se encontró una limitación en el contexto de React Native: la falta de librerías adecuadas. React Native no implementa WebSocket de manera nativa, por lo que hace uso de librerías de terceros. ALERTAR requiere que los dispositivos móviles de la capa de niebla actúen como servidores, pero ninguna de las librerías de WebSocket ofrece soporte para esta configuración. Todas las implementaciones existentes presuponen la presencia de servidores convencionales ejecutándose en computadoras dedicadas, excluyendo a dispositivos móviles.
 
-Descartado el uso de WebSocket se optó por implementar un protocolo de discretización de mensajes sobre TLS/TCP, utilizando la librería $react\_native\_tcp\_socket$ \cite{react-native-tcp-socket}.
+Descartado el uso de WebSocket se optó por implementar un protocolo de discretización de mensajes sobre TLS, utilizando la librería $react\_native\_tcp\_socket$ \cite{react-native-tcp-socket}.
 
 TLS utiliza certificados digitales para distribuir claves públicas y autenticar a las partes. En el caso de ALERTAR, los roles de cliente y servidor pueden cambiar dinámicamente, lo que impide depender de servidores fijos con certificados preestablecidos. Por esta razón, fue necesario diseñar e implementar un esquema dinámico para la distribución y validación de certificados, que permita asegurar las comunicaciones en un entorno donde los dispositivos pueden asumir distintos roles de forma flexible.
 
@@ -134,7 +134,7 @@ Para lograr la implementación del envío de mensajes discretos se diseñó e im
 
 \paragraph{Lado del receptor:}
 \begin{enumerate}
-    \item El receptor lee cuatro bytes del \textit{socket} de comunicaciones TLS/TCP.
+    \item El receptor lee cuatro bytes del \textit{socket} de comunicaciones TLS.
     \item Interpretar los cuatro bytes leídos como la longitud del próximo mensaje, considerando que los bytes están en formato \textit{big-endian}.
     \item El receptor lee los $N$ bytes especificados en el paso anterior. Estos bytes contienen el mensaje original del emisor. En caso de que se reciba un segmento de menos de $N$ bytes se almacenan hasta que se logre completar los $N$ bytes especificados.
     
@@ -145,7 +145,7 @@ Realizando la conversión a \textit{big-endian} para el envío y su posterior in
 
 \section{Mecanismo de detección de pérdida de conectividad}
 \label{sec:perdidaConect}
-Si bien el protocolo \textit{TCP} define mecanismos para la detección de fallos de conexión, la biblioteca utilizada para establecer comunicaciones \textit{TLS/TCP} presenta problemas para informarlos de manera apropiada e inmediata. Específicamente, cuando un dispositivo móvil pierde su conexión \textit{Wi-Fi} o de datos móviles, la biblioteca no logra detectar la desconexión. 
+Si bien el protocolo \textit{TCP} define mecanismos para la detección de fallos de conexión, la biblioteca utilizada para establecer comunicaciones \textit{TLS} presenta problemas para informarlos de manera apropiada e inmediata. Específicamente, cuando un dispositivo móvil pierde su conexión \textit{Wi-Fi} o de datos móviles, la biblioteca no logra detectar la desconexión. 
 
 Para solucionar este problema, se implementó un protocolo de \textit{Heartbeat} y reconexión. En este protocolo, los dispositivos de borde envían un mensaje de \textit{``ping''} cada cierto tiempo. Una vez enviado el mensaje de \textit{``ping''}, los dispositivos de borde esperan una respuesta de \textit{``pong''} por parte del servidor, ya sea un dispositivo de niebla o la nube. La espera esta limitada a un tiempo $T$. Si $T$ expira, se considera que la conexión del dispositivo se ha cortado y se inicia un proceso de reconexión al líder. 
 
